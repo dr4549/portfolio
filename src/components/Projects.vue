@@ -3,6 +3,8 @@
     <p class="title">Projects</p>
     <div>
       <p>To Do List</p>
+      <img src="@/assets/projects/todolist/todo1.png" />
+      ㅈㄷㄱㅈㄷㄱㅈㄷㄱㅈㄷㄱ
     </div>
   </div>
 </template>
@@ -18,10 +20,14 @@
   background-color: gray;
 
   div {
-    background-color: white;
+    background-color: rgb(150, 211, 247);
     padding: 50px;
     border-radius: 1rem;
     font-size: 2em;
+    font-weight: 600;
+    img {
+      height: 100px;
+    }
   }
 }
 </style>
