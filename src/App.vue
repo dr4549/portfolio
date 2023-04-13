@@ -65,4 +65,10 @@ const moveToProjects = () => {
 //     color: $title-color;
 //   }
 // }
+.title {
+  font-weight: 800;
+  margin-bottom: 100px;
+  top: 0;
+  font-size: 4em;
+}
 </style>

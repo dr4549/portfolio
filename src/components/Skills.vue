@@ -1,6 +1,6 @@
 <template>
   <div class="skills">
-    <p>Skills</p>
+    <p class="title">Skills</p>
     <ul class="frontend">
       <li>
         <h1>frontend</h1>
@@ -25,12 +25,6 @@
   //justify-content: center;
   align-items: center;
   flex-direction: column;
-  p {
-    font-weight: 800;
-    margin-bottom: 30px;
-    top: 0;
-    font-size: 4em;
-  }
   li {
     list-style: none;
     img {

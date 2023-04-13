@@ -1,6 +1,6 @@
 <template>
   <div class="aboutme" ref="aboutRef">
-    <p>about me</p>
+    <p class="title">about me</p>
     <ul>
       <li><img src="@/assets/aboutme/name.webp" />이름 : 김정환</li>
       <li><img src="@/assets/aboutme/date.webp" />생년월일 : 1998.03.10</li>
@@ -31,7 +31,7 @@ onMounted(() => {});
   display: flex;
   align-items: center;
   flex-direction: column;
-  p {
+  .title {
     font-weight: 800;
     margin-bottom: 100px;
     top: 0;

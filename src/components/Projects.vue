@@ -1,7 +1,9 @@
 <template>
   <div class="projects">
-    <p>Projects</p>
-    >
+    <p class="title">Projects</p>
+    <div>
+      <p>To Do List</p>
+    </div>
   </div>
 </template>
 <script setup></script>
@@ -13,12 +15,13 @@
   align-items: center;
   flex-direction: column;
   height: 600px;
-  background-color: rgb(69, 27, 88);
-  p {
-    font-weight: 800;
-    margin-bottom: 30px;
-    top: 0;
-    font-size: 4em;
+  background-color: gray;
+
+  div {
+    background-color: white;
+    padding: 50px;
+    border-radius: 1rem;
+    font-size: 2em;
   }
 }
 </style>
