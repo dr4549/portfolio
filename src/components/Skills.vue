@@ -1,18 +1,11 @@
 <template>
   <div class="skills">
     <p class="title">Skills</p>
-    <ul class="frontend">
-      <li>
-        <h1>frontend</h1>
-        <ol>
-          <li><img src="@/assets/skills/html.png" /></li>
-          <li><img src="@/assets/skills/css.png" /></li>
-          <li><img src="@/assets/skills/vuejs.png" /></li>
-        </ol>
-      </li>
-    </ul>
-    <ul class="backend"></ul>
-    <ul class="version Control"></ul>
+    <div class="logos">
+      <div class="circle"><img src="@/assets/skills/vuejs.png" /></div>
+      <div class="circle"><img src="@/assets/skills/github.png" /></div>
+      <div class="circle"><img src="@/assets/skills/scss.png" /></div>
+    </div>
   </div>
 </template>
 <script setup></script>
@@ -20,15 +13,29 @@
 .skills {
   position: relative;
   width: 100%;
+  height: 600px;
   display: flex;
   background-color: gray;
-  //justify-content: center;
+  //   justify-content: center;
   align-items: center;
   flex-direction: column;
-  li {
-    list-style: none;
-    img {
-      height: 40px;
+  .logos {
+    display: flex;
+    gap: 30px;
+
+    .circle {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: white;
+      flex-direction: column;
+      img {
+        height: 50%;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
     }
   }
 }
