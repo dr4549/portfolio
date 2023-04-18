@@ -30,6 +30,7 @@ const emit = defineEmits([
   "moveToSkills",
   "moveToArchiving",
   "moveToProjects",
+  "moveToBoard",
 ]);
 
 const navbarItems = [
@@ -55,6 +56,12 @@ const navbarItems = [
     title: "Projects",
     moveToSection: () => {
       emit("moveToProjects");
+    },
+  },
+  {
+    title: "Board",
+    moveToSection: () => {
+      emit("moveToBoard");
     },
   },
 ];

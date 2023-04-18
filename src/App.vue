@@ -5,6 +5,7 @@
       @moveToSkills="moveToSkills"
       @moveToArchiving="moveToArchiving"
       @moveToProjects="moveToProjects"
+      @moveToBoard="moveToBoard"
     />
     <div ref="myselfRef">
       <Myself />
@@ -21,6 +22,9 @@
     <div ref="projectsRef">
       <Projects />
     </div>
+    <div ref="boardRef">
+      <Board />
+    </div>
     <div>
       <Footer />
     </div>
@@ -35,12 +39,14 @@ import Skills from "./components/Skills.vue";
 import Archiving from "./components/Archiving.vue";
 import Projects from "./components/Projects.vue";
 import Footer from "./components/Footer.vue";
+import Board from "./components/Board.vue";
 
 const myselfRef = ref();
 const aboutmeRef = ref();
 const skillsRef = ref();
 const archivingRef = ref();
 const projectsRef = ref();
+const boardRef = ref();
 
 const moveToAboutme = () => {
   scrollTo({ top: aboutmeRef.value.offsetTop - 72, behavior: "smooth" });
@@ -53,6 +59,9 @@ const moveToArchiving = () => {
 };
 const moveToProjects = () => {
   scrollTo({ top: projectsRef.value.offsetTop - 72, behavior: "smooth" });
+};
+const moveToBoard = () => {
+  scrollTo({ top: boardRef.value.offsetTop - 72, behavior: "smooth" });
 };
 </script>
 
