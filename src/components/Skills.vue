@@ -2,9 +2,10 @@
   <div class="skills">
     <p class="title">Skills</p>
     <div class="logos">
-      <div class="circle"><img src="@/assets/skills/vuejs.png" /></div>
+      <div class="circle"><img src="@/assets/skills/vue.png" /></div>
       <div class="circle"><img src="@/assets/skills/github.png" /></div>
       <div class="circle"><img src="@/assets/skills/scss.png" /></div>
+      <div class="circle"><img src="@/assets/skills/firebase.png" /></div>
     </div>
   </div>
 </template>

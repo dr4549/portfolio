@@ -38,7 +38,7 @@ const emptyValue = ref(false);
 
 async function loadComments() {
   const commentRef = collection(db, "comments");
-  const q = query(commentRef, orderBy("date", "asc"));
+  const q = query(commentRef, orderBy("date", "desc"));
   const snapshot = await getDocs(q);
   comments.value = snapshot.docs.map((doc) => doc.data());
 }

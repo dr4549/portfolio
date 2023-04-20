@@ -25,7 +25,7 @@
           ><img src="@/assets/projects/todolist/todo4.png" />
         </swiper-slide>
       </swiper>
-      vue 공부를 시작해서 처음으로 만든 To Do List
+      <span>vue 공부를 시작해서 처음으로 만든 To Do List</span>
     </div>
   </div>
 </template>
@@ -51,6 +51,10 @@ import "swiper/css/pagination";
     border-radius: 1rem;
     font-weight: 600;
     text-align: center;
+    margin-bottom: 100px;
+    p {
+      font-size: 2em;
+    }
   }
   .swiper {
     width: 100%;

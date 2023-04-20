@@ -2,7 +2,7 @@
   <div class="myself">
     <div class="wrapper">
       <p class="p1">웹 개발자 <br />포트폴리오<br />-김정환-</p>
-      <div class="hr"></div>
+
       <p class="p2">
         안녕하세요.<br />정신력과 개발을 겸비한 개발자 김정환입니다.
       </p>
@@ -36,11 +36,7 @@
     z-index: 1;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
       url("@/assets/myself/pic1.jpg");
-    .hr {
-      width: 100%;
-      height: 1px;
-      background: black;
-    }
+
     p {
       color: white;
       background-clip: text;
