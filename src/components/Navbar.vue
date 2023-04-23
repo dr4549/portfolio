@@ -1,4 +1,5 @@
 <template>
+  <!-- //수정 -->
   <div class="Navbar">
     <p @click="moveToNavbar">KJH's Portfolio</p>
     <ul>
