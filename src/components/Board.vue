@@ -1,22 +1,40 @@
 <template>
   <div class="board" ref="Board">
     <p class="title">Board</p>
+    <span>감상평을 남겨주세요.</span>
     <form @submit.prevent="addComment">
-      <input v-model="name" type="text" placeholder="이름" />
-      <input v-model="comment" type="text" placeholder="댓글" />
-      <button type="submit">제출</button>
-      <p v-show="emptyValue" class="warning">이름 또는 댓글을 적어주세요</p>
+      <div class="inputwrapper">
+        <input v-model="name" type="text" class="name" placeholder="이름" />
+        <input
+          v-model="comment"
+          type="text"
+          class="comment"
+          placeholder="댓글"
+        />
+      </div>
+      <button type="submit" class="submit">제출</button>
     </form>
-    <div v-for="(comment, index) in comments" :key="index">
-      <strong>{{ comment.name }}:</strong> {{ comment.comment }}
-      <!-- <small
+    <p v-show="emptyValue" class="warning">이름 또는 댓글을 적어주세요</p>
+    <table>
+      <th>name</th>
+      <th>comments</th>
+      <th>date</th>
+      <tr v-for="(comment, index) in comments" :key="index">
+        <td>{{ comment.name }}</td>
+        <td>
+          {{ comment.comment }}
+        </td>
+        <!-- <small
         >작성일:{{
           new Date(comment.date?.seconds * 1000).toLocaleString()
         }}</small -->
-      <small
-        >작성일: {{ new Date(comment.date.toMillis()).toLocaleString() }}</small
-      >
-    </div>
+        <td>
+          <small>
+            {{ new Date(comment.date.toMillis()).toLocaleString() }}</small
+          >
+        </td>
+      </tr>
+    </table>
   </div>
 </template>
 
@@ -67,12 +85,52 @@ onMounted(() => {
 <style lang="scss">
 .board {
   width: 100%;
-  height: 700px;
+  margin-bottom: 100px;
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  text-align: center;
+  span {
+    font-size: 2em;
+    margin-bottom: 30px;
+  }
+  form {
+    width: 80%;
+    margin: 20px 0px;
+    display: flex;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    justify-content: space-between;
+    ::-webkit-input-placeholder {
+      text-align: center;
+    }
+    .inputwrapper {
+      display: flex;
+      gap: 30px;
+      input {
+        border-radius: 10px;
+        border: 2px solid black;
+      }
+    }
+    .submit {
+      width: 50px;
+      height: 30px;
+      border-radius: 10px;
+    }
+  }
+  table {
+    width: 80%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    td {
+      border: 1px solid black;
+    }
+  }
 }
+
 .warning {
   color: red;
 }
