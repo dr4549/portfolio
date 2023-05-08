@@ -15,26 +15,29 @@
       <button type="submit" class="submit">제출</button>
     </form>
     <p v-show="emptyValue" class="warning">이름 또는 댓글을 적어주세요</p>
-    <table>
-      <th>name</th>
-      <th>comments</th>
-      <th>date</th>
-      <tr v-for="(comment, index) in comments" :key="index">
-        <td>{{ comment.name }}</td>
-        <td>
-          {{ comment.comment }}
-        </td>
-        <!-- <small
+    <div class="asd">
+      <table>
+        <th>Name</th>
+        <th>Comments</th>
+        <th>Date</th>
+
+        <tr v-for="(comment, index) in comments" :key="index">
+          <td>{{ comment.name }}</td>
+          <td>
+            {{ comment.comment }}
+          </td>
+          <!-- <small
         >작성일:{{
           new Date(comment.date?.seconds * 1000).toLocaleString()
         }}</small -->
-        <td>
-          <small>
-            {{ new Date(comment.date.toMillis()).toLocaleString() }}</small
-          >
-        </td>
-      </tr>
-    </table>
+          <td>
+            <small>
+              {{ new Date(comment.date.toMillis()).toLocaleString() }}</small
+            >
+          </td>
+        </tr>
+      </table>
+    </div>
   </div>
 </template>
 
@@ -103,15 +106,18 @@ onMounted(() => {
     left: 50%;
     transform: translate(-50%, 0);
     justify-content: space-between;
-    ::-webkit-input-placeholder {
-      text-align: center;
-    }
+
     .inputwrapper {
       display: flex;
       gap: 30px;
+      ::-webkit-input-placeholder {
+        text-align: center;
+        padding-right: 5px;
+      }
       input {
         border-radius: 10px;
         border: 2px solid black;
+        padding-left: 5px;
       }
     }
     .submit {
@@ -120,13 +126,26 @@ onMounted(() => {
       border-radius: 10px;
     }
   }
+
   table {
     width: 80%;
     position: relative;
     left: 50%;
     transform: translate(-50%, 0);
+    border-collapse: collapse;
+
+    th {
+      font-weight: bold;
+    }
     td {
-      border: 1px solid black;
+      border: 1px solid gray;
+      padding: 5px;
+    }
+    tr:nth-child(2n) {
+      background-color: #bbdefb;
+    }
+    tr:nth-child(2n + 1) {
+      background-color: #e3f2fd;
     }
   }
 }

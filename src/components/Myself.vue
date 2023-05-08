@@ -14,7 +14,7 @@
 //font-face {
 //   font-family: "ClimateCrisisKR-1979";
 //   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/ClimateCrisisKR-1979.woff2")
-//     format("woff2");
+//     format("woff2");,klm, m,
 // font-weight: 900;
 //  font-style: normal;
 //}
