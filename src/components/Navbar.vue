@@ -1,8 +1,8 @@
 <template>
   <!-- //수정 -->
   <div class="Navbar">
-    <p @click="moveToNavbar">KJH's Portfolio</p>
-    <ul>
+    <p class="navbar_logo" @click="moveToNavbar">KJH's Portfolio</p>
+    <ul class="navbar_menu">
       <!-- <li @click="moveToSection('aboutme')">about me</li>
       <li @click="moveToSection('skills')">skills</li>
       <li @click="moveToSection('archiving')">Archiving</li>
@@ -15,7 +15,9 @@
         {{ item.title }}
       </li>
     </ul>
-    <p class="open">open</p>
+    <div class="navbar_bar">
+      <img src="@//assets/navbar/bar.png" />
+    </div>
   </div>
 </template>
 
@@ -83,12 +85,24 @@ const navbarItems = [
   white-space: nowrap;
   font-size: 1.5em;
   opacity: 0.7;
-  @media (max-width: 768px) {
-    & {
+  .navbar_menu {
+    @media screen and (max-width: 768px) {
+      display: block;
+    }
+  }
+  .navbar_bar {
+    display: none;
+    img {
+      margin-top: 10px;
+      width: 50px;
+    }
+    @media screen and (max-width: 768px) {
+      display: block;
       padding: 0 20px;
       font-size: 1em;
     }
   }
+
   @media (max-width: 500px) {
     & {
       padding: 0;
@@ -110,13 +124,9 @@ const navbarItems = [
       cursor: pointer;
       list-style: none;
     }
-  }
-  .open {
-    display: none;
-    @media (max-width: 500px) {
-      & {
-        display: block;
-      }
+    li:hover {
+      background-color: gray;
+      border-radius: 4px;
     }
   }
 }

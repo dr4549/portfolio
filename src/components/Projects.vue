@@ -25,7 +25,10 @@
           ><img src="@/assets/projects/todolist/todo4.png" />
         </swiper-slide>
       </swiper>
-      <span>vue 공부를 시작해서 처음으로 만든 To Do List</span>
+      <span
+        >vue를 입문했을 때 만들어 본 To Do List 입니다. <br />components, props,
+        emits 사용이 익숙지 않아서 어려웠던 기억이 있습니다.
+      </span>
     </div>
   </div>
 </template>

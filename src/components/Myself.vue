@@ -44,7 +44,7 @@
       //   font-family: "Roboto", sans-serif;
       //   font-family: "Open Sans";
       //   font-family: "Source Sans Pro";
-      font-family: "Lato";
+      //   font-family: "Lato";
       //   font-family: "Montserrat";
       //   font-family: "ClimateCrisisKR-1979";
     }
