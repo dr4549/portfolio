@@ -8,6 +8,7 @@
       <li @click="moveToSection('archiving')">Archiving</li>
       <li @click="moveToSection('projects')">Projects</li> -->
       <li
+        v-show="navbar_menu"
         v-for="item in navbarItems"
         :key="item.id"
         @click="item.moveToSection"
@@ -16,14 +17,19 @@
       </li>
     </ul>
     <div class="navbar_bar">
-      <img src="@//assets/navbar/bar.png" />
+      <img src="@/assets/navbar/bar.png" @click="toggleMenu" />
     </div>
   </div>
 </template>
 
 <script setup>
-import { defineEmits } from "vue";
+import { defineEmits, ref } from "vue";
 
+const navbar_menu = ref(true);
+
+const toggleMenu = () => {
+  navbar_menu.value = !navbar_menu.value;
+};
 const moveToNavbar = () => {
   scrollTo({ top: 0, behavior: "smooth" });
 };
@@ -92,6 +98,7 @@ const navbarItems = [
   }
   .navbar_bar {
     display: none;
+    cursor: pointer;
     img {
       margin-top: 10px;
       width: 50px;
@@ -112,6 +119,7 @@ const navbarItems = [
   p {
     cursor: pointer;
   }
+
   ul {
     display: flex;
     gap: 40px;
@@ -121,6 +129,7 @@ const navbarItems = [
       }
     }
     li {
+      background-color: white;
       cursor: pointer;
       list-style: none;
     }
