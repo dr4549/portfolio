@@ -20,7 +20,6 @@
         <th>Name</th>
         <th>Comments</th>
         <th>Date</th>
-
         <tr v-for="(comment, index) in comments" :key="index">
           <td>{{ comment.name }}</td>
           <td>
