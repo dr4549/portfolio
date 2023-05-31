@@ -121,6 +121,7 @@ const navbarItems = [
   }
 
   ul {
+    margin-left: 30px;
     display: flex;
     gap: 40px;
     @media (max-width: 500px) {

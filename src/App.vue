@@ -80,4 +80,9 @@ const moveToBoard = () => {
   top: 0;
   font-size: 4em;
 }
+.home {
+  width: 100%;
+  margin: 0, outo;
+  min-width: 480px;
+}
 </style>

@@ -27,7 +27,6 @@ onMounted(() => {});
 <style lang="scss" scoped>
 .aboutme {
   position: relative;
-  width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -45,8 +44,8 @@ onMounted(() => {});
   }
   ul {
     position: relative;
-    left: 50%;
-    transform: translate(-50%, 0);
+    justify-content: center;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 80px 0px;
