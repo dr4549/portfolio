@@ -23,7 +23,7 @@
 </template>
 
 <script setup>
-import { defineEmits, ref } from "vue";
+import { defineEmits, ref, onMounted } from "vue";
 
 const navbar_menu = ref(true);
 
@@ -74,6 +74,19 @@ const navbarItems = [
     },
   },
 ];
+
+const onResize1515 = () => {
+  if (matchMedia("(min-width: 769px)").matches) {
+    navbar_menu.value = true;
+  }
+};
+
+onMounted(() => {
+  if (matchMedia("(max-width: 768px)").matches) {
+    navbar_menu.value = false;
+  }
+  window.addEventListener("resize", onResize1515);
+});
 </script>
 <style lang="scss" scoped>
 .Navbar {
@@ -93,7 +106,13 @@ const navbarItems = [
   opacity: 0.7;
   .navbar_menu {
     @media screen and (max-width: 768px) {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      margin-top: 72px;
+      margin-left: 0;
       display: block;
+      text-align: center;
     }
   }
   .navbar_bar {
